@@ -1,4 +1,6 @@
-class Gishatich extends Living {
+import Living from './Living'
+
+export class Gishatich extends Living {
     constructor(x, y) {
         super(x, y);
         this.energy = 10;

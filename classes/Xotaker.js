@@ -1,4 +1,6 @@
-class Xotaker extends Living {
+import Living from './Living'
+
+export class Xotaker extends Living {
     constructor(x, y) {
         super(x, y)
         this.energy = 5;

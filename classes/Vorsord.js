@@ -1,4 +1,6 @@
-class Vorsord {
+import Living from './Living'
+
+export class Vorsord extends Living {
     constructor(x, y) {
         super(x, y);
         this.directions = [];

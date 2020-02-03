@@ -1,4 +1,6 @@
-class Grass extends Living {
+import Living from './Living'
+
+export class Grass extends Living {
     constructor(x, y) {
         super(x, y)
         this.multiply = 0;

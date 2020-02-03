@@ -1,4 +1,6 @@
-class GishatichEater {
+import Living from './Living'
+
+export class GishatichEater extends Living {
     constructor(x, y) {
         super(x, y);
         this.directions = [];

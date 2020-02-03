@@ -1,0 +1,12 @@
+// normala vor grass@ prcnuma???
+// 342 row (question)
+// 334 332 row (matrix syntax)
+// 59 row (question)
+// 447 row (verj)
+// Grass - 1
+// Xotaker - 2
+// Gishatich - 3
+// GishatichEater - 4
+// Amenaker - 5
+// NorKerpar - 6
+// view prog-02 2 lastest updates

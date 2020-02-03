@@ -4,29 +4,22 @@ class Xotaker extends Living {
         this.energy = 5;
         this.directions = [];
         this.index = 2;
+        this.multiply = 0; //with multiply
     }
-
-    stanalNorKordinatner() {
-        this.directions = [
-            [this.x - 1, this.y - 1],
-            [this.x, this.y - 1],
-            [this.x + 1, this.y - 1],
-            [this.x - 1, this.y],
-            [this.x + 1, this.y],
-            [this.x - 1, this.y + 1],
-            [this.x, this.y + 1],
-            [this.x + 1, this.y + 1]
-        ];
-    }
-
 
     bazmanal() {
-        if (this.energy == 10) {
-            var norXotaker = new Xotaker(this.x, this.y);
+        this.multiply++
+        this.stanalNorKordinatner();
+        var norVandak = random(this.yntrelVandak(0));
+        if (this.energy == 10 && norVandak && this.multiply >= 5) {
+            var norXotaker = new Xotaker(norVandak[0], norVandak[1]); // chischt dzev senc
             xotakerArr.push(norXotaker)
+            matrix[norVandak[1]][norVandak[0]] = 2; // matrixi mej grelu dzev senc
             this.energy = 5;
+            this.multiply = 0;
         }
     }
+
     utel() {
         this.stanalNorKordinatner();
         var xot = this.yntrelVandak(1);
@@ -49,7 +42,6 @@ class Xotaker extends Living {
         }
     }
 
-
     mahanal() {
         if (this.energy == 0) {
             for (var i in xotakerArr) {
@@ -62,6 +54,7 @@ class Xotaker extends Living {
             }
         }
     }
+    
     sharjvel() {
         this.stanalNorKordinatner();
         var datark = this.yntrelVandak(0);

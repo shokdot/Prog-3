@@ -1,6 +1,6 @@
-import Living from './Living'
+var Living = require('./Living')
 
-export class Gishatich extends Living {
+module.exports = class Gishatich extends Living {
     constructor(x, y) {
         super(x, y);
         this.energy = 10;

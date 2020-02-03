@@ -1,6 +1,6 @@
-import Living from './Living'
+var Living = require('./Living')
 
-export class Vorsord extends Living {
+module.exports = class Vorsord extends Living {
     constructor(x, y) {
         super(x, y);
         this.directions = [];

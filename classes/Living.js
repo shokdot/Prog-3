@@ -1,4 +1,4 @@
-export class Living {
+module.exports = class Living {
     constructor(x, y) {
         this.x = x,
             this.y = y,

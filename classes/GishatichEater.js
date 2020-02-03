@@ -1,6 +1,6 @@
-import Living from './Living'
+var Living = require('./Living')
 
-export class GishatichEater extends Living {
+module.exports = class GishatichEater extends Living {
     constructor(x, y) {
         super(x, y);
         this.directions = [];

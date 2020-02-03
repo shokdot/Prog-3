@@ -1,6 +1,6 @@
-import Living from './Living'
+var Living = require('./Living')
 
-export class Xotaker extends Living {
+module.exports = class Xotaker extends Living {
     constructor(x, y) {
         super(x, y)
         this.energy = 5;

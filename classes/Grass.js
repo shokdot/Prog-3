@@ -1,6 +1,6 @@
-import Living from './Living'
+var Living = require('./Living')
 
-export class Grass extends Living {
+module.exports = class Grass extends Living {
     constructor(x, y) {
         super(x, y)
         this.multiply = 0;

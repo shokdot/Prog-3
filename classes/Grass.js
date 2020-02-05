@@ -10,7 +10,9 @@ module.exports = class Grass extends Living {
     
     bazmanal() {
         this.multiply++;
-        var norVandak = random(this.yntrelVandak(0));
+        var dat = this.yntrelVandak(0)
+        var dat1 = Math.floor(Math.random() * dat.length)
+        var norVandak = dat[dat1]
 
         if (this.multiply >= 5 && norVandak) {
             var norXot = new Grass(norVandak[0], norVandak[1]);

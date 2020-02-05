@@ -11,7 +11,8 @@ module.exports = class Vorsord extends Living {
     sharjvel() {
         this.stanalNorKordinatner();
         var datark = this.yntrelVandak(0);
-        var norVandak = random(datark);
+        var dat = Math.floor(Math.random() * datark.length)
+        var norVandak = datark[dat]
         if (norVandak) {
 
             matrix[this.y][this.x] = 0;
@@ -29,15 +30,16 @@ module.exports = class Vorsord extends Living {
     utel() {
         this.stanalNorKordinatner();
         var xotaker = this.yntrelVandak(4);
-        var miHatXotaker = random(xotaker);
+        var dat = Math.floor(Math.random() * xotaker.length)
+        var miHatXotaker = xotaker[dat];
         if (miHatXotaker) {
             matrix[this.y][this.x] = 0;
             this.x = miHatXotaker[0];
             this.y = miHatXotaker[1];
             matrix[miHatXotaker[1]][miHatXotaker[0]] = 5;
-            for (var i in GishatichEater) {
-                if (this.x == GishatichEater[i].x && this.y == GishatichEater[i].y) {
-                    GishatichEater.splice(i, 1);
+            for (var i in GishatichEaterArr) {
+                if (this.x == GishatichEaterArr[i].x && this.y == GishatichEaterArr[i].y) {
+                    GishatichEaterArr.splice(i, 1);
                 }
             }
         } else {

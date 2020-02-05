@@ -1,5 +1,4 @@
 var Living = require('./Living')
-
 module.exports = class Xotaker extends Living {
     constructor(x, y) {
         super(x, y)
@@ -12,7 +11,10 @@ module.exports = class Xotaker extends Living {
     bazmanal() {
         this.multiply++
         this.stanalNorKordinatner();
-        var norVandak = random(this.yntrelVandak(0));
+        var datark = this.yntrelVandak(0)
+        var dat = Math.floor(Math.random() * datark.length)
+        var norVandak = datark[dat]
+        
         if (this.energy == 10 && norVandak && this.multiply >= 5) {
             var norXotaker = new Xotaker(norVandak[0], norVandak[1]); // chischt dzev senc
             xotakerArr.push(norXotaker)
@@ -25,7 +27,8 @@ module.exports = class Xotaker extends Living {
     utel() {
         this.stanalNorKordinatner();
         var xot = this.yntrelVandak(1);
-        var miHatXot = random(xot);
+        var dat = Math.floor(Math.random() * xot.length)
+        var miHatXot = xot[dat]
         if (miHatXot) {
             matrix[this.y][this.x] = 0;
             this.x = miHatXot[0];
@@ -60,7 +63,8 @@ module.exports = class Xotaker extends Living {
     sharjvel() {
         this.stanalNorKordinatner();
         var datark = this.yntrelVandak(0);
-        var norVandak = random(datark);
+        var dat = Math.floor(Math.random() * datark.length);
+        var norVandak = datark[dat]
         if (norVandak) {
 
             matrix[this.y][this.x] = 0;

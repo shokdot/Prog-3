@@ -11,7 +11,8 @@ module.exports = class Gishatich extends Living {
     sharjvel() {
         this.stanalNorKordinatner();
         var datark = this.yntrelVandak(0);
-        var norVandak = random(datark);
+        var dat = Math.floor(Math.random() * datark.length)
+        var norVandak = datark[dat]
         if (norVandak) {
 
             matrix[this.y][this.x] = 0;
@@ -28,7 +29,8 @@ module.exports = class Gishatich extends Living {
     utel() {
         this.stanalNorKordinatner();
         var xotaker = this.yntrelVandak(2);
-        var miHatXotaker = random(xotaker);
+        var dat = Math.floor(Math.random() * xotaker.length)
+        var miHatXotaker = xotaker[dat]
         if (miHatXotaker) {
             matrix[this.y][this.x] = 0;
             this.x = miHatXotaker[0];
@@ -48,7 +50,9 @@ module.exports = class Gishatich extends Living {
 
     bazmanal() {
         this.stanalNorKordinatner();
-        var norVandak = random(this.yntrelVandak(0));
+        var dat = this.yntrelVandak(0)
+        var dat1 = Math.floor(Math.random() * dat.length)
+        var norVandak = dat[dat1]
         if (this.energy == 10 && norVandak) {
             var norGishatich = new Gishatich(norVandak[0], norVandak[1]); // chischt dzev senc
             GishatichArr.push(norGishatich)

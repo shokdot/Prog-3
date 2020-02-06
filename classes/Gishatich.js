@@ -6,6 +6,7 @@ module.exports = class Gishatich extends Living {
         this.energy = 10;
         this.directions = [];
         this.index = 3;
+        this.utelvar;
     }
 
     sharjvel() {
@@ -37,6 +38,7 @@ module.exports = class Gishatich extends Living {
             this.y = miHatXotaker[1];
             matrix[miHatXotaker[1]][miHatXotaker[0]] = 3;
             this.energy++;
+            this.utelvar++
             this.bazmanal();
             for (var i in xotakerArr) {
                 if (this.x == xotakerArr[i].x && this.y == xotakerArr[i].y) {
@@ -54,9 +56,9 @@ module.exports = class Gishatich extends Living {
         var dat1 = Math.floor(Math.random() * dat.length)
         var norVandak = dat[dat1]
         if (this.energy == 10 && norVandak) {
-            var norGishatich = new Gishatich(norVandak[0], norVandak[1]); // chischt dzev senc
+            var norGishatich = new Gishatich(norVandak[0], norVandak[1]);
             GishatichArr.push(norGishatich)
-            matrix[norVandak[1]][norVandak[0]] = 3; // matrixi mej grelu dzev senc
+            matrix[norVandak[1]][norVandak[0]] = 3;
             this.energy = 5;
         }
     }

@@ -1,11 +1,12 @@
 var Living = require('./Living')
+// var Grass = require('./Grass')
 
 module.exports = class Vorsord extends Living {
     constructor(x, y) {
         super(x, y);
         this.directions = [];
         this.index = 5;
-        this.energy = 100;
+        this.energy = 10;
     }
 
     sharjvel() {
@@ -53,7 +54,7 @@ module.exports = class Vorsord extends Living {
                     VorsordArr.splice(i, 1);
                     matrix[this.y][this.x] = 0;
                     // var verj = new Grass(this.x,this.y)   //
-                    // grassArr.push(verj)  // verj nor grass generator
+                   // grassArr.push(verj)  // verj nor grass generator
 
                 }
 

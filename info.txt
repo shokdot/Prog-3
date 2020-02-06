@@ -1,9 +1,12 @@
-// normala vor grass@ prcnuma???
-// 342 row (question)
-// 334 332 row (matrix syntax)
-// 59 row (question)
-// 447 row (verj)
 // Grass - 1
 // Xotaker - 2
 // Gishatich - 3
 // GishatichEater - 4
+// Vorsord - 5
+
+//problem of datark  Vandak
+// problem setTimeout row 29 script.js
+
+
+// statistics.json
+// to start delete content of statistics

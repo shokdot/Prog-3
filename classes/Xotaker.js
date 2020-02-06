@@ -5,7 +5,7 @@ module.exports = class Xotaker extends Living {
         this.energy = 5;
         this.directions = [];
         this.index = 2;
-        this.multiply = 0; //with multiply
+        this.multiply = 0;
     }
 
     bazmanal() {
@@ -16,9 +16,9 @@ module.exports = class Xotaker extends Living {
         var norVandak = datark[dat]
         
         if (this.energy == 10 && norVandak && this.multiply >= 5) {
-            var norXotaker = new Xotaker(norVandak[0], norVandak[1]); // chischt dzev senc
+            var norXotaker = new Xotaker(norVandak[0], norVandak[1]);
             xotakerArr.push(norXotaker)
-            matrix[norVandak[1]][norVandak[0]] = 2; // matrixi mej grelu dzev senc
+            matrix[norVandak[1]][norVandak[0]] = 2;
             this.energy = 5;
             this.multiply = 0;
         }
@@ -35,7 +35,6 @@ module.exports = class Xotaker extends Living {
             this.y = miHatXot[1]
             matrix[miHatXot[1]][miHatXot[0]] = 2;
             this.energy++;
-
             this.bazmanal();
             for (var i in grassArr) {
                 if (this.x == grassArr[i].x && this.y == grassArr[i].y) {

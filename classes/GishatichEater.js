@@ -55,22 +55,13 @@ module.exports = class GishatichEater extends Living {
         var dat1 = Math.floor(Math.random() * dat.length)
         var norVandak = dat[dat1]
         if (this.energy == 10 && norVandak) {
-            var norGishatichEater = new GishatichEater(norVandak[0], norVandak[1]); // chischt dzev senc
+            var norGishatichEater = new GishatichEater(norVandak[0], norVandak[1]);
             GishatichEaterArr.push(norGishatichEater)
-            matrix[norVandak[1]][norVandak[0]] = 4; // matrixi mej grelu dzev senc
+            matrix[norVandak[1]][norVandak[0]] = 4;
             this.energy = 5;
         }
     }
 
-
-    // bazmanal() {
-    //     if (this.energy == 10) {
-    //         var norGishatich = new Gishatich(this.x, this.y);   bazmanulu dzev@ ??? vorna chisht
-    //         GishatichArr.push(norGishatich)
-    //         this.energy = 5;
-    //     }
-
-    //}
 
     mahanal() {
         if (this.energy == 0) {

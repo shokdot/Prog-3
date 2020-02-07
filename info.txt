@@ -4,9 +4,8 @@
 // GishatichEater - 4
 // Vorsord - 5
 
-//problem of datark  Vandak
-// problem setTimeout row 29 script.js
-
+// setTimeOut 
 
 // statistics.json
 // to start delete content of statistics
+// grassArr.length.....

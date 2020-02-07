@@ -37,9 +37,9 @@ module.exports = class GishatichEater extends Living {
             matrix[miHatXotaker[1]][miHatXotaker[0]] = 4;
             this.energy++;
             this.bazmanal();
-            for (var i in xotakerArr) {
-                if (this.x == xotakerArr[i].x && this.y == xotakerArr[i].y) {
-                    xotakerArr.splice(i, 1);
+            for (var i in GishatichArr) {
+                if (this.x == GishatichArr[i].x && this.y == GishatichArr[i].y) {
+                    GishatichArr.splice(i, 1);
                 }
             }
         } else {

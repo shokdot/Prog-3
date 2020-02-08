@@ -3,9 +3,3 @@
 // Gishatich - 3
 // GishatichEater - 4
 // Vorsord - 5
-
-// setTimeOut 
-
-// statistics.json
-// to start delete content of statistics
-// grassArr.length.....

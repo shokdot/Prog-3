@@ -3,14 +3,9 @@ var matrix = [];
 var socket = io();
 
 var btn = document.getElementById('btn_1')
-var btn2 = document.getElementById('btn_2')
 
 btn.addEventListener('click', (data) => {
     socket.emit('btn_1', data)
-});
-
-btn2.addEventListener('click', (data) => {
-    socket.emit('btn_2', data)
 });
 
 socket.on('matrix', function (data) {
